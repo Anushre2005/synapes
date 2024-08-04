@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Resume</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>John Doe</h1>
+        <p>Web Developer</p>
+    </header>
+    <section id="profile">
+        <h2>Profile</h2>
+        <p>Experienced web developer with a strong background in front-end and back-end technologies...</p>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <ul>
+            <li>Bachelor of Science in Computer Science - XYZ University, 2020</li>
+            <li>Master of Science in Software Engineering - ABC University, 2022</li>
+        </ul>
+    </section>
+    <section id="experience">
+        <h2>Experience</h2>
+        <ul>
+            <li>Web Developer at Tech Solutions Inc., 2022-present</li>
+            <li>Junior Developer at Web Innovations, 2020-2022</li>
+        </ul>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Angular, Vue.js</li>
+            <li>Node.js, Express.js, MongoDB</li>
+        </ul>
+    </section>
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: john.doe@example.com</p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/johndoe" target="_blank">linkedin.com/in/johndoe</a></p>
+    </section>
+</body>
+</html>
