@@ -21,17 +21,17 @@ overall_percentage=[]
 
 def calculate_intersection(set1,set2):
     intersection=set1.intersection(set2)
-    intersection_percentage_withset1=(len(intersection)/len(set1))*100
-    intersection_percentage_withset2=(len(intersection)/len(set2))*100
+    return (len(intersection)/len(set1))*100,
+    return (len(intersection)/len(set2))*100
 
 
-for (dj1, set1), (dj2, set2) in pairs:
-    overlap_percentage1 = calculate_intersection(set1, set2)
-    overlap_percentage2 = calculate_intersection(set2, set1)
+for items in pairs:
+    overlap_percentage1,overlap_percentage2 = calculate_intersection(items[0], items[1])
+
     
     if overlap_percentage1>=30 & overlap_percentage2>=30:
         overall_overlap=max(overlap_percentage1,overlap_percentage2)
-        pairs_with_overlap.append((dj1,dj2))
+        pairs_with_overlap.append(items)
         overall_percentage.append(overall_overlap)
 
 print(pairs_with_overlap)       
