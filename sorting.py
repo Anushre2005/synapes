@@ -11,6 +11,8 @@ gadgets=[
     ("Batmobile Tires",4,True)
 
 ]
-gadgets.sort(key=lambda x:(x[1],-x[0] ),reverse=True,reverse=False)
+gadgets.sort(key=lambda x:x[0] ,reverse=False)
+gadgets.sort(key=lambda x:x[1] ,reverse=True)
+
 for row in gadgets:
     print(row)
