@@ -14,24 +14,19 @@ Edith={
       }
 DJs=[Kevin,Stuart,Bob,Edith]
     
-pairs=(itertools.combinations(DJs,2))
+pairs=combinations(DJs,2)
 # pairs={(i,j),(i,j),(i,j),(),}
 pairs_with_overlap=[]
 overall_percentage=[]
 
 def calculate_intersection(set1,set2):
     intersection=set1.intersection(set2)
-    return (len(intersection)/len(set1))*100,
-    return (len(intersection)/len(set2))*100
-
+    return min(((len(intersection)/len(set1))*100),((len(intersection)/len(set2))*100))
 
 for items in pairs:
-    overlap_percentage1,overlap_percentage2 = calculate_intersection(items[0], items[1])
-
+    overlap_percentage = calculate_intersection(items[0] ,items[1])
+    if overlap_percentage>=30 :
+        pairs_with_overlap.append((items[0] ,items[1]))
     
-    if overlap_percentage1>=30 & overlap_percentage2>=30:
-        overall_overlap=max(overlap_percentage1,overlap_percentage2)
-        pairs_with_overlap.append(items)
-        overall_percentage.append(overall_overlap)
 
-print(pairs_with_overlap)       
+print(pairs_with_overlap)  
